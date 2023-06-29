@@ -8,3 +8,5 @@ In this design, the OpenCV open source library and specifically the cascade and 
 
 #### Report:
 The [report](https://github.com/rezaAdinepour/Bachelors-Project/blob/main/Report/thesis.tex) file of this project is written with LaTeX.
+
+All figures in the report are drawn with [Ipe](https://ipe.otfried.org/) software.
