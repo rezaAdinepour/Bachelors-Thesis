@@ -6,3 +6,5 @@ The purpose of this thesis was to design and implement a real-time system for de
 
 In this design, the OpenCV open source library and specifically the cascade and K-NN classifier are used. One of the advantages of this system is its portability, which can be used in various environments that require this application, such as offices for attendance and absence and recording the hours of arrival and departure of people.
 
+#### Report:
+The report file of this project is written with LaTeX.
