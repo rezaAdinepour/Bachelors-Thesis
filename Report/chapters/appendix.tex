@@ -1,0 +1,55 @@
+
+\فصل{مطالب تکمیلی}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+	language=python,
+	aboveskip=3mm,
+	belowskip=3mm,
+	lineskip=1pt,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=left,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3,
+}
+
+در این قسمت، بخشی از کد های مهم پروژه آورده شده است. فایل‌های اصلی پروژه را می‌توانید از این لینک\زیرنویس{ لینک دریافت: \href{https://github.com/rezaAdinepour/Bachelors-Project}{\کد{github.com/rezaAdinepour/Bachelors-Project}}} دریافت کنید.
+
+\قسمت{استخراج بردار ویژگی‌های LBP}
+در این قسمت برنامه ای ساده برای استخراج ویژگی های LBP و تشکیل بردار ویژگی‌ها نوشته شده است. \\
+• برنامه استخراج ویژگی‌های LBP
+\begin{latin}
+	\lstinputlisting[language=Python]{Code/LBP/LBP_Features.py}
+\end{latin}
+
+\قسمت{تست دوربین}
+در این قسمت ابتدا از اتصال دوربین به بورد اطمینان حاصل می‌کنیم. \\
+• برنامه اتصال دوربین به بورد
+\begin{latin}
+	\lstinputlisting[language=Python]{Code/CamTest.py}
+\end{latin}
+
+\قسمت{فاز آموزش}
+• تابع نوشته شده در بخش آموزش برنامه به صورت زیر است:
+\begin{latin}
+	\lstinputlisting[language=Python]{Code/train_phase_function.py}
+\end{latin}
+
+
+\قسمت{فاز تست و شناسایی چهره}
+در بحث شناسایی چهره، مهم‌ترین گام تشخصی محل چهره در تصویر است که در این قسمت آن را تست کردیم.
+
+• برنامه تشخیص چهره
+\begin{latin}
+	\lstinputlisting[language=Python]{Code/FaceDetection.py}
+\end{latin}

@@ -1,0 +1,395 @@
+%---------------------------------------------------------------------------------------------
+%‌ Chapter 3
+%---------------------------------------------------------------------------------------------
+\فصل{راه‌اندازی سخت‌افزار}
+
+در این فصل به برسی مشخصات سخت‌افزار مورد استفاده، نصب سیستم عامل می‌پردازیم.
+%---------------------------------------------------------------------------------------------
+\قسمت{معرفی بورد \lr{Odroid-XU4}}
+
+بُرد اودروید مینی‌کامپیوتری است که می‌توان بر روی آن سیستم‌عامل هایی مثل لینوکس «اوبونتو\پاورقی {Ubuntu}،فدورا\پاورقی {Fedora}،آرچ\پاورقی {ArchLinux} و دبین\پاورقی {Debian}»
+اندروید\پاورقی {Android} را نصب کرد. در این پروژه از سیستم عامل لینوکس و توزیع Ubuntu استفاده شده است.
+
+بُرد اودروید مشخصاتی همانند سایر کامپیوترهای معمولی را دارد. CPU ،RAM پورت‌های استاندارد ورودی و خروجی و... که بلوک دیاگرام آن در «شکل \رجوع{شکل:بلوک دیاگرام اودروید}» آورده شده است.
+
+
+\شروع{شکل}[h]
+\centerimg{Odroid_Block_Diagram}{15cm}
+\شرح{بلوک دیاگرام 4Odroid-XU}
+\برچسب{شکل:بلوک دیاگرام اودروید}
+\پایان{شکل}
+
+\شروع{شکل}[h]
+\centerimg{Odroid_Board}{14cm}
+\شرح{بورد 4Odroid-XU}
+\برچسب{شکل:بورد اودروید}
+\پایان{شکل}
+
+تغذیه بُرد، 5 ولت 4 آمپر پیشنهاد شده است که ما از یک آداپتور ،DC 5 ولت 6 آمپر استفاده کردیم. برای نمایش تصویر هم از یک مانیتور معمولی استفاده شده. از یک عدد موس و کیبورد معمولی هم برای دسترسی کاربر استفاده شده است. ضمن اینکه از یک عدد MicroSD کارت 32 گیگابایتی برای نصب سیستم عامل بر روی آن استفاده شده است «می‌توان از حافظه ای با حجم کمتر هم استفاده نمود»
+
+\قسمت{نصب سیستم عامل}
+ابتدا از این لینک\زیرنویس{ لینک دانلود: \href{https://odroid.com/dokuwiki/doku.php?id=en:xu3_ubuntu_release_note_20161011}{\lr{\کد{odroid.com/dokuwiki/doku.php?id=en:xu3\_ubuntu\_release\_note\_20161011}}}} آخرین ورژن اوبونتو را دانلود می‌کنیم.
+«در این پروژه از \کد{Ubuntu 16.04} استفاده شده است.
+
+\شروع{شکل}[h]
+\centerimg{Odroid_OS_Page}{10cm}
+\شرح{صفحه دانلود سیستم‌عامل}
+\برچسب{شکل:صفحه دانلود سیستم‌عامل}
+\پایان{شکل}
+
+فایل دانلود شده با پسوند \کد{.img} را باید با یکی از نرم‌افزار های فشرده‌ساز مانند \کد{WinRAR}\زیرنویس{ می‌توانید از این لینک نرم‌افزار را دانلود کنید: \href{https://soft98.ir/software/compress/21-winrar-full.html}{\lr{\کد{soft98.ir/software/compress/21-winrar-full.html}}}} «شکل \رجوع{شکل:صفحه دانلود وین‌رار}» یا \کد{7-Zip}\زیرنویس{ می‌توانید از این لینک نرم‌افزار را دانلود کنید: \href{https://7-zip.org/download.html}{\lr{\کد{7-zip.org/download.html}}}} «شکل \رجوع{شکل:صفحه دانلود سون زیپ}» استخراج و به فایل قابل \کد{Boot} تبدیل کرد.
+
+\شروع{شکل}[h]
+\centerimg{WinRAR}{10cm}
+\شرح{صفحه دانلود \lr{WinRAR}}
+\برچسب{شکل:صفحه دانلود وین‌رار}
+\پایان{شکل}
+
+\شروع{شکل}[h]
+\centerimg{7Zip}{10cm}
+\شرح{صفحه دانلود \lr{7-Zip}}
+\برچسب{شکل:صفحه دانلود سون زیپ}
+\پایان{شکل}
+
+بعد از استخراج فایل \کد{ubuntu-16.04-mate-odroid-xu3-20161011} ‌نوبت به بوت کردن MicroSD می‌رسد. برای این کار از نرم‌افزار \کد{Win32DiskImager\_odroid\_v13}\زیرنویس{ می‌توانید از لینک زیر نرم‌افزار را دانلود کنید: \href{http://bit.ly/1LVPcbF}{\lr{\کد{bit.ly/1LVPcbF}}}} «شکل \رجوع{شکل:نرم‌افزار وین32}» استفاده شده است.
+
+\شروع{شکل}[h]
+\centerimg{Win32Disk}{10cm}
+\شرح{نرم‌افزار \lr{Win32DiskImager}}
+\برچسب{شکل:نرم‌افزار وین32}
+\پایان{شکل}
+
+با قرار دادن MicroSD در کامپیوتر و انتخاب مسیر فایل و انتخاب دکمه Write فرآیند Boot آغاز می‌شود. این کار چند دقیقه طول خواهد کشید و در نهایت اگر عملیات به‌درستی پایان یابد، پیغام Successful بر روی صفحه نمایان می‌شود و می‌توانید MicroSD را از کامپیوتر جداکرده و آماده روشن کردن بُرد شوید.
+
+\قسمت{روشن کردن بورد}
+پس از آنکه عملیات Boot کردن سیستم‌عامل با موفقیت انجام شد، نوبت به روشن کردن بُرد می‌رسد. MicroSD را در محل خود طبق «شکل \رجوع{شکل:بورد اودروید}» قرار دهید. با استفاده از کابل HDMI بُرد را به مانیتور متصل می‌کنیم. موس و کیبورد راهم به خروجی‌های USB وصل می‌کنیم.
+
+پس از آنکه از اتصال تمام لوازم جانبی به بُرد مطمئن شدیم، تغذیه بُرد را وصل میکنیم. اگر تغذیه در مدار جاری شود، یک LED قرمز رنگ روشن می‌شود. چند ثانیه پس از روشن شدن LED قرمز رنگ، LED آبی رنگی شروع به چشمک زدن می‌کند «مانند ضربان قلب» که این نشان دهنده Boot شدن سیستم عامل است. اگر LED آبی رنگ چشمک نزند، احتمالا فرآیند Boot کردن سیستم عامل به درستی انجام نشده است و باید مجددا سیستم عامل بر روی Card MicroSD نصب شود.
+
+اگر سیستم به درستی Boot شود، صفحه ورود به سیستم عامل را مشاهده می‌کنید که باید رمز ورود سیستم وارد شود. رمزعبور سیستم به صورت پیش‌فرض \مهم{\کد{odroid}} است. اگر به درستی رمزعبور را وارد نمایید، سیستم روشن شده و به طور کامل دراختیار شما قرار می‌گیرد.
+
+\صفحه‌جدید
+
+
+\شروع{شکل}[ht]
+\centerimg{Ubuntu_Desktop}{13cm}
+\شرح{صفحه دسکتاپ اوبونتو}
+\برچسب{شکل:دسکتاپ اوبونتو}
+\پایان{شکل}
+
+
+\قسمت{نصب پکیج‌ها و کتابخانه‌های ضروری}
+در ابتدا با زدن \کد{Ctrl+Alt+T} یا کلیک راست بر‌روی صفحه و انتخاب گزینه \کد{Open new terminal} یک صفحه ترمینال بازکرده و دستورات زیر را به ترتیب اجرا می‌کنیم: «در هر مرحله اگر نیاز به وارد کردن رمزعبور بود، \کد{\مهم{odroid}} وارد شود.»
+
+\مهم{در هنگام نصب پکیج ها حتما از دسترسی سیستم به اینترنت اطمینان حاصل کنید. از آنجایی که در \کد{Odroid-XU4} ماژول \کد{Wifi} وجود ندارد، نمی‌توان به صورت بی‌سیم\پاورقی{Wireless} به اینترنت وصل شد. روشی که پیشنهاد می‌شود، اتصال از طرق نقطه‌اتصال\پاورقی{Hotspot tethering} است. بدین صورت که با استفاده از یک کابل \کد{USB} به اینترنت موبایل وصل شده و از تنظیمات موبایل، \کد{USB Hotspot Tethering} را فعال کرده و به اینترنت وصل می‌شویم}
+
+\زیرقسمت{آپدیت سیستم}
+جهت دانلود و آپدیت Package ها و Dependency های قدیمی سیستم دستورات زیر وارد شود:
+\begin{latin}
+	\begin{enumerate}
+		\item \کد{\textcolor{blue}{\$} sudo apt update}
+		\item \کد{\textcolor{blue}{\$} sudo apt-get upgrade}
+	\end{enumerate}
+\end{latin}
+
+\زیرقسمت{نصب git}
+جهت دانلود و نصب git دستورات زیر وارد شود:
+\begin{latin}
+	\begin{enumerate}
+		\item \کد{\textcolor{blue}{\$} sudo apt install git}
+		\item \کد{\textcolor{blue}{\$} git --version}\hfill\break
+		\کد{\textcolor{blue}{output: }git version 2.7.4}
+	\end{enumerate}
+\end{latin}
+
+\زیرقسمت{نصب oh-my-zsh}
+این پکیج جهت طبقه‌بندی و جلوه بهتر ترمینال نصب می‌شود:
+\begin{latin}
+	\begin{enumerate}
+		\item \کد{\textcolor{blue}{\$} sh -c "\$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/\hfill\break master/tools/install.sh -O -)"}
+	\end{enumerate}
+\end{latin}
+
+\زیرقسمت{نصب پایتون 3}
+به صورت پیش‌فرض بر روی سیستم پایتون 7.2 نصب است اما به‌جهت ارتباط بهتر پکیج ها با پایتون، ورژن 3 آن نصب شده است.
+\begin{latin}
+	\begin{enumerate}
+		\item \کد{\textcolor{blue}{\$} sudo apt install software-properties-common}
+		\item \کد{\textcolor{blue}{\$} sudo add-apt-repository ppa:deadsnakes/ppa}
+		\item \کد{\textcolor{blue}{\$} sudo apt update}
+		\item \کد{\textcolor{blue}{\$} sudo apt install python3.5}
+		\item \کد{\textcolor{blue}{\$} python --version} \hfill\break
+	\کد{\textcolor{blue}{output: }python 3.5.2}
+	\end{enumerate}
+\end{latin}
+
+
+\زیرقسمت{تغییر ورژن پایتون}
+پس از نصب پایتون 3 مراحل زیر را برای تغییر ورژن پیش‌فرض پایتون انجام دهید:
+\begin{latin}
+	\begin{enumerate}
+		\item \کد{\textcolor{blue}{\$} sudo update-alternatives --install /usr/bin /python python /user/\hfil\break bin/python2.7 1}
+		
+		\item \کد{\textcolor{blue}{\$} sudo update-alternatives --install /usr/bin /python python /user/\hfil\break bin/python3.5 2\hfill\break
+		\کد{\textcolor{blue}{output: }update-alternatives: using /usr/bin/python3.5 to provide \hfil\break/usr/bin/python (python) in auto mode}}
+	\item \کد{\textcolor{blue}{\$} sudo update-alternatives --config python\hfill\break}
+	\کد{\textcolor{blue}{output:} \rl{«شکل \رجوع{شکل:تغییر پیش‌فرض پایتون}»}}
+	
+	\end{enumerate}
+\end{latin}
+
+
+\شروع{شکل}[h]
+\centerimg{Change_Python_Version}{10cm}
+\شرح{تغییر ورژن پیش‌فرض پایتون}
+\برچسب{شکل:تغییر پیش‌فرض پایتون}
+\پایان{شکل}
+
+
+\زیرقسمت{نصب pip}
+pip سیستم نصب و مدیریت پکیج و کتابخانه های پایتون است که به‌صورت زیر نصب می‌شود: 
+\begin{latin}
+	\begin{enumerate}
+		\item \rl{اسکریپت نصب را از این لینک\زیرنویس{\href{https://bootstrap.pypa.io/get-pip.py}{\کد{bootstrap.pypa.io/get-pip.py}}} دانلود کنید}
+		\item \rl{در محل دانلود یک صفحه ترمینال باز کنید و دستور زیر را تایپ کنید}
+		\item \کد{\textcolor{blue}{\$} python get-pip.py}
+		\item \کد{\textcolor{blue}{\$} python -m pip install --upgrade pip}
+		\item \کد{\textcolor{blue}{\$} python -m pip --version} \hfil\break
+		\کد{\textcolor{blue}{output: }pip 20.3.4 from /home/odroid/.local/lib/python3.5/site-packages (python 3.5)}
+	\end{enumerate}
+\end{latin}
+
+\زیرقسمت{نصب IDE Idle}
+Idle\پاورقی{Integrated Development Environment}, IDE پیش‌فرض پایتون برای ادیت و اجرای کدهاست «شکل \رجوع{شکل:محیط آیدل}» که به صورت زیر نصب می‌شود:
+\begin{latin}
+	\begin{enumerate}
+		\item \کد{\textcolor{blue}{\$} sudo apt-get update}
+		\item \کد{\textcolor{blue}{\$} sudo apt-get install idle3}
+	\end{enumerate}
+\end{latin}
+
+\شروع{شکل}[h]
+\centerimg{Idle_IDE}{13cm}
+\شرح{محیط Idle}
+\برچسب{شکل:محیط آیدل}
+\پایان{شکل}
+
+
+\زیرقسمت{نصب کتابخانه Numpy}
+Numpy کتابخانه ایست برای انجام محاسبات جبری و ماتریسی که به‌صورت زیر نصب می‌شود: 
+
+\begin{latin}
+	\begin{enumerate}
+		\item \کد{\textcolor{blue}{\$} pip3 install numpy}
+	\end{enumerate}
+\end{latin}
+
+\زیرقسمت{نصب کتابخانه Pandas}
+Pandas کتابخانه ایست جهت کار و استفاده از دیتاست‌ها که به صورت زیر نصب می‌شود:
+
+\begin{latin}
+	\begin{enumerate}
+		\item \کد{\textcolor{blue}{\$} pip3 install pandas}
+	\end{enumerate}
+\end{latin}
+
+
+\زیرقسمت{نصب کتابخانه Pillow}
+Pillow کتابخانه ایست برای تصویر برداری که به‌صورت زیر نصب می‌شود:
+
+\begin{latin}
+	\begin{enumerate}
+		\item \کد{\textcolor{blue}{\$} pip3 install Pillow}
+	\end{enumerate}
+\end{latin}
+
+\زیرقسمت{نصب کتابخانه Tkinter}
+Tkinter کتابخانه ایست برای نوشتن رابط کاربری GUI\پاورقی{Graphical User Interface} که به صورت زیر نصب می‌شود: 
+
+\begin{latin}
+	\begin{enumerate}
+		\item \کد{\textcolor{blue}{\$} pip3 install tk}
+	\end{enumerate}
+\end{latin}
+
+
+\زیرقسمت{نصب کتابخانه OpenCV}
+OpenCV\پاورقی {Open Computer Vision Library}،‌کتابخانه ایست برای انجام کارهای پردازش تصویر،‌یادگیری ماشین و ... که به زبان C++ نوشته شده است. این کتابخانه رابط برنامه نویسی کاملی برای زبان های پایتون، جاوا و متلب دارد. در سیستم های مبتنی بر لینوکس و ویندوز، ورژن پایتون این کتابخانه با دستور \کد{\textcolor{blue}{\$} pip install opencv-python} نصب می‌شود. اما در بُرد ما این امکان فراهم نیست و نمی‌توان بدین صورت کتابخانه را نصب کرد.
+
+برای نصب باید به صورت زیر سورس‌کد کتابخانه را برای سیستم‌عامل مورد نظر خودمان کامپایل کنیم.
+\begin{latin}
+	\begin{enumerate}
+		\begin{persian}
+			\item \rl{\textbf{به‌روز رسانی سیستم}}
+		\end{persian}
+		\begin{enumerate}
+			\item \کد{\textcolor{blue}{\$} sudo apt update}
+			\item \کد{\textcolor{blue}{\$} sudo apt upgrade}
+		\end{enumerate}
+		
+		
+		\begin{persian}
+			\textbf{\item \rl{ابزار زیر را نصب کنید}}
+		\end{persian}
+		\begin{enumerate}
+			\item \کد{\textcolor{blue}{\$} sudo apt -y install build-essential cmake gfortran\hfill\break pkg-config unzip software-properties-common doxygen}
+		\end{enumerate}
+	
+	
+		\begin{persian}
+			\textbf{\item \rl{به‌روز رسانی Python Pip، Numpy،}}
+		\end{persian}
+		\begin{enumerate}
+			\item \کد{\textcolor{blue}{\$} sudo apt -y install python-dev python-pip python3-dev\hfill\break python3-pip python3-testresources}
+			\item \کد{\textcolor{blue}{\$} sudo apt -y install python-numpy python3-numpy}
+		\end{enumerate}
+		
+		
+		\begin{persian}
+			\textbf{\item \rl{موارد زیر را جهت تضمین نصب کامل OpenCV نصب کنید}}
+		\end{persian}
+		\begin{enumerate}
+			\item \کد{\textcolor{blue}{\$} sudo apt -y install libblas-dev libblas-test liblapack-dev \hfill\break libatlas-base-dev libopenblas-base libopenblas-dev}
+			\item \کد{\textcolor{blue}{\$} sudo apt -y install libjpeg-dev libpng-dev libtiff-\hfill\break dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev}
+			\item \کد{\textcolor{blue}{\$} sudo apt -y install libxvidcore-dev libx264-dev}
+			\item \کد{\textcolor{blue}{\$} sudo apt -y install libgtk2.0-dev libgtk-3-dev libcanberra-gtk*}
+			\item \کد{\textcolor{blue}{\$} sudo apt -y install libtiff5-dev libeigen3-dev libtheora-dev\hfill\break libvorbis-dev sphinx-common libtbb-dev yasm libopencore-amrwb-dev}
+			\item \کد{\textcolor{blue}{\$} sudo apt -y install libopenexr-dev libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev libavutil-dev libavfilter-dev}
+			\item \کد{\textcolor{blue}{\$} sudo apt -y install libavresample-dev ffmpeg\hfill\break libdc1394-22-dev libwebp-dev}
+			\item \کد{\textcolor{blue}{\$} sudo apt -y install libjpeg8-dev libxine2-dev\hfill\break libfaac-dev libmp3lame-dev libopencore-amrnb-dev libprotobuf-dev}
+			\item \کد{\textcolor{blue}{\$} sudo apt -y install protobuf-compiler libgoogle-glog-dev\hfill\break libgflags-dev libgphoto2-dev libhdf5-dev}
+			\item \کد{\textcolor{blue}{\$} sudo apt -y install qt5-default v4l-utils}
+			\item \کد{\textcolor{blue}{\$} sudo apt -y install libtbb2}
+			\begin{persian}
+این مرحله کمی طول می‌کشد، صبور باشید...
+			\end{persian}
+		\end{enumerate}
+	
+	
+		\begin{persian}
+			\textbf{\item \rl{کتابخانه های قدیمی Ubuntu را نصب کنید}}
+		\end{persian}
+		\begin{enumerate}
+			\item \کد{\textcolor{blue}{\$} sudo add-apt-repository \textcolor{magenta}{"deb http://ports.ubuntu.com/ubuntu-ports xenial-security main"}}
+			\item \کد{\textcolor{blue}{\$} sudo apt -y update}
+			\item \کد{\textcolor{blue}{\$} sudo apt -y install libjasper-dev libjasper}
+		\end{enumerate}
+	
+	
+		\begin{persian}
+			\textbf{\item \rl{ایجاد پوشه جهت کامپایل OpenCV 2.1.4}}
+		\end{persian}
+		\begin{enumerate}
+			\item \کد{\textcolor{blue}{\$} mkdir opencv\_package}
+			\begin{persian}
+				شما می‌توانید هر مسیری دیگری را برای کامپایل انتخاب کنید.
+			\end{persian}
+		\end{enumerate}
+	
+	
+		\begin{persian}
+			\textbf{\item \rl{دانلود فایل های OpenCV}}
+		\end{persian}
+		\begin{enumerate}
+			\item \کد{\textcolor{blue}{\$} wget -O opencv.zip \hfill\break \textcolor{magenta}{\href{https://github.com/opencv/opencv/archive/4.1.2.zip}{https://github.com/opencv/opencv/archive/4.1.2.zip}}}
+			\item \کد{\textcolor{blue}{\$} wget -O opencv\_contrib.zip \hfill\break \textcolor{magenta}{\href{https://github.com/opencv/opencv\_contrib/archive/4.1.2.zip}{https://github.com/opencv/opencv\_contrib/archive/4.1.2.zip}}}
+		\end{enumerate}
+	
+	
+		\begin{persian}
+			\textbf{\item \rl{خارج کردن فایل‌های دانلود شده از حالت فشرده}}
+		\end{persian}
+		\begin{enumerate}
+			\item \کد{\textcolor{blue}{\$} unzip opencv.zip}
+			\item \کد{\textcolor{blue}{\$} unzip opencv\_contrib.zip}
+		\end{enumerate}
+	
+	
+		\begin{persian}
+			\textbf{\item \rl{برای راحتی کار، پوشه‌های دانلود شده را تغییر نام دهید}}
+		\end{persian}
+		\begin{enumerate}
+			\item \کد{\textcolor{blue}{\$} mv opencv-4.1.2 opencv}
+			\item \کد{\textcolor{blue}{\$} mv opencv\_contrib-4.1.2 opencv\_contrib}
+		\end{enumerate}
+	
+	
+		\begin{persian}
+			\textbf{\item \rl{به محل پوشه ایجاد شده می‌رویم}}
+		\end{persian}
+		\begin{enumerate}
+			\item \کد{\textcolor{blue}{\$} mv cd opencv}
+			\item \کد{\textcolor{blue}{\$} mv mkdir build}
+			\item \کد{\textcolor{blue}{\$} cd build}
+		\end{enumerate}
+	
+	
+		\begin{persian}
+			\textbf{\item \rl{عملیات کامپایل را با دستورات زیر پیکره‌بندی کنید}}
+		\end{persian}
+		\begin{enumerate}
+			\item \کد{\textcolor{blue}{\$} cmake -D CMAKE\_BUILD\_TYPE=RELEASE \textbackslash  \hfill\break
+				-D CMAKE\_INSTALL\_PREFIX=/usr/local \textbackslash \hfill\break
+				-D OPENCV\_ENABLE\_NONFREE=ON \textbackslash \hfill\break
+				-D OPENCV\_EXTRA\_MODULES\_PATH=/home/odroid/Desktop/opencv\_contrib/modules \textbackslash \hfill\break
+				-D PYTHON\_EXECUTABLE=/usr/bin/python3.6 \textbackslash \hfill\break
+				-D PYTHON2\_EXECUTABLE=/usr/bin/python2.7 \textbackslash \hfill\break
+				-D PYTHON3\_EXECUTABLE=/usr/bin/python3.6 \textbackslash \hfill\break
+				-D PYTHON\_PACKAGES\_PATH=/usr/lib/python3/dist-packages \textbackslash \hfill\break
+				-D PYTHON\_LIBRARY=/usr/lib/python3.6/config-3.6m-arm-linux-gnueabihf/
+				libpython3.6m.so \textbackslash \hfill\break
+				-D PYTHON\_INCLUDE\_DIR=/usr/include/python3.6 \textbackslash \hfill\break
+				-D PYTHON3\_NUMPY\_INCLUDE\_DIRS=/usr/lib/python3\hfill\break/dist-packages/numpy/core/include \textbackslash \hfill\break
+				-D OPENCV\_GENERATE\_PKGCONFIG=ON \textbackslash \hfill\break
+				-D OPENCV\_PYTHON3\_INSTALL\_PATH=/home/odroid/Desktop/opencv\_package \textbackslash \hfill\break
+				-D INSTALL\_PYTHON\_EXAMPLES=OFF \textbackslash \hfill\break
+				-D INSTALL\_C\_EXAMPLES=OFF \textbackslash \hfill\break
+				-D BUILD\_DOCS=NO \textbackslash \hfill\break
+				-D BUILD\_TIFF=ON \textbackslash \hfill\break
+				-D WITH\_FFMPEG=ON \textbackslash \hfill\break
+				-D WITH\_GSTREAMER=ON \textbackslash \hfill\break
+				-D WITH\_TBB=ON \textbackslash \hfill\break
+				-D BUILD\_TBB=ON \textbackslash \hfill\break
+				-D WITH\_V4L=ON \textbackslash \hfill\break
+				-D WITH\_LIBV4L=ON \textbackslash \hfill\break
+				-D WITH\_VTK=OFF \textbackslash \hfill\break
+				-D WITH\_OPENGL=ON \textbackslash \hfill\break
+				-D BUILD\_NEW\_PYTHON\_SUPPORT=ON \textbackslash \hfill\break
+				-D BUILD\_TESTS=OFF \textbackslash \hfill\break
+				-D BUILD\_EXAMPLES=OFF ..}
+		\end{enumerate}
+	
+	
+		\begin{persian}
+			\textbf{\item \rl{با دستور زیر، فرایند کامپایل را آغاز کنید}}
+		\end{persian}
+		\begin{enumerate}
+			\item \کد{\textcolor{blue}{\$} make -j4}
+			\begin{persian}
+				بورد 4Odroid-XU دارای 8 هسته است. با اعمال کد بالا از نصف ظرفیت بورد برای کامپایل استفاده می‌کنیم. ضمن اینکه عملیات کامپایل چندین ساعت طول می‌کشد. صبور باشید...
+			\end{persian}
+		\end{enumerate}
+	
+	
+		\begin{persian}
+			\textbf{\item \rl{با نصب OpenCV 2.1.4 عملیات کامپایل را به پایان برسانید}}
+		\end{persian}
+		\begin{enumerate}
+			\item \کد{\textcolor{blue}{\$} sudo make install}
+			\item \کد{\textcolor{blue}{\$} sudo ldconfig}
+			\item \کد{\textcolor{blue}{\$} sudo apt update}
+		\end{enumerate}
+	
+	
+		\begin{persian}
+			\textbf{\item \rl{مرحله آخر}} \\
+			نصب OpenCV 2.1.4 به پایان رسید است. با دستور زیر می‌تواند از نصب آن اطمینان حاصل کنید.
+		\end{persian}
+		\begin{enumerate}
+			\item \کد{\textcolor{blue}{\$} python}
+			\item \کد{\textcolor{blue}{\$} import cv2}
+			\item \کد{\textcolor{blue}{\$} cv2.\_\_version\_\_}\hfil\break
+			\کد{\textcolor{blue}{output: }'4.1.2'}
+		\end{enumerate}
+	\end{enumerate}
+\end{latin}
