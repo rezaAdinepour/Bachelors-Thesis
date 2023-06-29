@@ -1,7 +1,7 @@
 # **My B.Sc. Thesis**
 ## Title: *Design Real Time Face Recognition Systems Based on LBP Features on Odroid XU4 Embedded Computer Board*
 
-[thesis title](poe://www.poe.com/_api/key_phrase?phrase=image%20file&prompt=Tell%20me%20more%20about%20image%20file.)
+[thesis title]([poe://www.poe.com/_api/key_phrase?phrase=image%20file&prompt=Tell%20me%20more%20about%20image%20file.](https://github.com/rezaAdinepour/Bachelors-Project/blob/main/Report/figs/thesis.png))
 
 ### Abstract:
 The purpose of this thesis was to design and implement a real-time system for detect and recognition people’s faces based on local binary patterns. This system is implemented on Odroid embedded computer.
