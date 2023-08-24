@@ -1,7 +1,7 @@
 # **My B.Sc. Thesis**
 ## Title: *Design Real Time Face Recognition Systems Based on LBP Features on Odroid XU4 Embedded Computer Board*
 
-![image](https://github.com/rezaAdinepour/Bachelors-Project/tree/main/Report/figs/thesis.png)
+![image](Report/figs/thesis.png)
 
 ## Abstract:
 The purpose of this thesis was to design and implement a real-time system for detect and recognition people’s faces based on local binary patterns. This system is implemented on Odroid embedded computer.
@@ -15,4 +15,4 @@ All figures in the report are drawn with [Ipe](https://ipe.otfried.org/) softwar
 
 ## Result:
 In the following you can see you can see a photo of the judgment day
-![image](https://github.com/rezaAdinepour/Bachelors-Project/tree/main/Report/figs/Attendance_Test2.jpg)
+![image](Report/figs/Attendance_Test2.jpg)
