@@ -15,4 +15,4 @@ All figures in the report are drawn with [Ipe](https://ipe.otfried.org/) softwar
 
 ## Result:
 In the following you can see you can see a photo of the judgment day
-![image](Report/figs/Attendance_Test2.png)
+![image](Report/figs/Attendance_Test2.jpg)
