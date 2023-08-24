@@ -3,12 +3,16 @@
 
 ![image](Report/figs/thesis.png)
 
-### Abstract:
+## Abstract:
 The purpose of this thesis was to design and implement a real-time system for detect and recognition people’s faces based on local binary patterns. This system is implemented on Odroid embedded computer.
 
 In this design, the OpenCV open source library and specifically the cascade and K-NN classifier are used. One of the advantages of this system is its portability, which can be used in various environments that require this application, such as offices for attendance and absence and recording the hours of arrival and departure of people.
 
-#### Report:
+## Report:
 The [report](https://github.com/rezaAdinepour/Bachelors-Project/blob/main/Report/thesis.tex) file of this project is written with LaTeX.
 
 All figures in the report are drawn with [Ipe](https://ipe.otfried.org/) software.
+
+## Result:
+In the following you can see you can see a photo of the judgment day
+![image](Report/figs/)
