@@ -14,5 +14,5 @@ The [report](https://github.com/rezaAdinepour/Bachelors-Project/blob/main/Report
 All figures in the report are drawn with [Ipe](https://ipe.otfried.org/) software.
 
 ## Result:
-In the following you can see you can see a photo of the judgment day
+In the following you can see you can see a photo of the presentation day
 ![image](Report/figs/Attendance_Test2.JPG)
